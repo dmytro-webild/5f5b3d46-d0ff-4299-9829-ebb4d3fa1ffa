@@ -1,4 +1,5 @@
 import { useLayoutEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import { motion, useReducedMotion } from "motion/react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
@@ -52,31 +53,46 @@ const FooterTrayWordmark = ({ brand, logoSrc, wordmark, columns = [], copyright,
 
   return (
     <footer aria-label={ariaLabel ?? `${brand} footer`} className={cn("relative bg-background pt-[calc(var(--section-space)/2)] text-foreground", className)}>
-      <div className="relative isolate mx-[var(--panel-inset)] mb-[var(--panel-inset)] overflow-hidden rounded-[var(--radius-card)] bg-card pt-[clamp(2.5rem,5vw,4.5rem)] text-card-foreground">
-        <div className="mx-auto grid w-[var(--container)] grid-cols-1 gap-x-[var(--gap)] gap-y-[clamp(2.5rem,5vw,3.5rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-          <motion.a {...rise(0)} href="#" aria-label={brand} className="flex w-fit min-w-0 items-start">
-            {logoSrc ? (
-              <Media src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-[clamp(2rem,3vw,2.5rem)] w-auto max-w-[60vw] object-contain" />
-            ) : (
-              <p className="font-[family-name:var(--font-heading)] text-[length:var(--text-h3)] leading-[1.2] tracking-[var(--heading-tracking)] [overflow-wrap:anywhere]">{brand}</p>
-            )}
-          </motion.a>
+      <div className="relative isolate mx-[var(--panel-inset)] mb-[var(--panel-inset)] overflow-hidden rounded-[var(--radius-card)] bg-card pt-[clamp(2.5rem,5vw,4.5rem)] text-card-foreground border border-[#1C2B4B]">
+        <div className="mx-auto grid w-[var(--container)] grid-cols-1 gap-x-[var(--gap)] gap-y-[clamp(2.5rem,5vw,3.5rem)] lg:grid-cols-[minmax(0,1fr)_minmax(0,2.5fr)]">
+          <motion.div {...rise(0)} className="flex flex-col gap-4">
+            <Link to="/" aria-label={brand} className="flex w-fit items-center gap-3">
+              {logoSrc ? (
+                <Media src={logoSrc} alt={brand} loading="lazy" decoding="async" className="h-[2.75rem] w-auto max-w-[60vw] object-contain drop-shadow" />
+              ) : null}
+              <span className="font-[family-name:var(--font-heading)] text-2xl font-bold tracking-[var(--heading-tracking)] text-[#FEF9EE]">{brand}</span>
+            </Link>
+            <p className="text-sm text-muted-foreground max-w-xs leading-relaxed">
+              Faith. Community. Growth. A Next-Generation Christian Digital Ecosystem developed by Veltrix Technologies.
+            </p>
+          </motion.div>
 
           {shown.length > 0 && (
-            <nav aria-label="Footer" className="grid grid-cols-2 gap-x-[var(--gap)] gap-y-[2.5rem] sm:grid-cols-4">
+            <nav aria-label="Footer Navigation" className="grid grid-cols-2 gap-x-[var(--gap)] gap-y-[2.5rem] sm:grid-cols-4">
               {shown.map((column, i) => (
                 <motion.div key={`${i}-${column.title}`} {...rise(0.1 + i * 0.08)} className="flex min-w-0 flex-col gap-[1rem]">
-                  <h3 className="text-[length:var(--text-label)] leading-[1.5] text-muted-foreground [overflow-wrap:anywhere]">{column.title}</h3>
+                  <h3 className="text-[length:var(--text-label)] font-semibold leading-[1.5] text-[#F0BB5D] [overflow-wrap:anywhere]">{column.title}</h3>
                   <div className="flex flex-col gap-[0.5rem]">
-                    {column.links.slice(0, 8).map((link, j) => (
-                      <a
-                        key={`${j}-${link.text}`}
-                        href={link.href}
-                        className="w-fit text-[length:var(--text-body)] leading-[1.5] [overflow-wrap:anywhere] transition-opacity duration-300 hover:opacity-60"
-                      >
-                        {link.text}
-                      </a>
-                    ))}
+                    {column.links.slice(0, 8).map((link, j) => {
+                      const isInternal = link.href.startsWith('/');
+                      return isInternal ? (
+                        <Link
+                          key={`${j}-${link.text}`}
+                          to={link.href}
+                          className="w-fit text-[length:var(--text-body)] text-[#FEF9EE]/80 leading-[1.5] [overflow-wrap:anywhere] transition-colors duration-300 hover:text-[#F0BB5D]"
+                        >
+                          {link.text}
+                        </Link>
+                      ) : (
+                        <a
+                          key={`${j}-${link.text}`}
+                          href={link.href}
+                          className="w-fit text-[length:var(--text-body)] text-[#FEF9EE]/80 leading-[1.5] [overflow-wrap:anywhere] transition-colors duration-300 hover:text-[#F0BB5D]"
+                        >
+                          {link.text}
+                        </a>
+                      );
+                    })}
                   </div>
                 </motion.div>
               ))}
@@ -84,16 +100,19 @@ const FooterTrayWordmark = ({ brand, logoSrc, wordmark, columns = [], copyright,
           )}
         </div>
 
-        <div className="mx-auto mt-[clamp(3rem,6vw,5rem)] flex w-[var(--container)] flex-wrap items-center justify-between gap-x-[var(--gap)] gap-y-[0.75rem] border-t border-border pt-[1.25rem]">
+        <div className="mx-auto mt-[clamp(3rem,6vw,5rem)] flex w-[var(--container)] flex-wrap items-center justify-between gap-x-[var(--gap)] gap-y-[0.75rem] border-t border-[#1C2B4B] pt-[1.25rem]">
           {copyright && <p className="text-[length:var(--text-small)] leading-[1.5] text-muted-foreground">{copyright}</p>}
-          <a href="#" className="group flex items-center gap-[0.625rem] text-[length:var(--text-small)] leading-[1.5]">
+          <button
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="group flex items-center gap-[0.625rem] text-[length:var(--text-small)] text-[#FEF9EE]/80 leading-[1.5] hover:text-[#F0BB5D] transition-colors"
+          >
             {topText}
-            <div className="flex size-[2rem] items-center justify-center rounded-[0.625rem] bg-background transition-colors duration-300 group-hover:bg-accent">
+            <div className="flex size-[2rem] items-center justify-center rounded-[0.625rem] bg-[#010519] border border-[#1C2B4B] transition-colors duration-300 group-hover:bg-[#F0BB5D] group-hover:text-[#010519]">
               <svg aria-hidden="true" viewBox="0 0 24 24" className="size-[1rem]" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M12 20V4M5 11l7-7 7 7" />
               </svg>
             </div>
-          </a>
+          </button>
         </div>
 
         <div ref={boxRef} aria-hidden="true" className="relative mx-auto mt-[clamp(1.5rem,4vw,3rem)] w-[var(--container)] min-w-0">
@@ -106,7 +125,7 @@ const FooterTrayWordmark = ({ brand, logoSrc, wordmark, columns = [], copyright,
               whileInView={{ y: "0em" }}
               viewport={{ once: true, amount: 0.2 }}
               transition={spring}
-              className="whitespace-pre bg-linear-to-b from-foreground to-foreground/35 bg-clip-text font-[family-name:var(--font-heading)] font-semibold leading-none tracking-[-0.07em] text-transparent"
+              className="whitespace-pre bg-linear-to-b from-[#F0BB5D] via-[#FEF9EE] to-[#101B35]/40 bg-clip-text font-[family-name:var(--font-heading)] font-bold leading-none tracking-[-0.07em] text-transparent opacity-80"
             >
               {mark}
             </motion.p>

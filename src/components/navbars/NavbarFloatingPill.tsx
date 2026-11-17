@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import useMenuDialog from "@/components/kit/useMenuDialog";
 
@@ -24,6 +25,7 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
   const [scrolled, setScrolled] = useState(false);
   const reduce = useReducedMotion();
   const panelRef = useRef<HTMLDivElement>(null);
+  const location = useLocation();
 
   useMenuDialog(open, panelRef, () => setOpen(false));
 
@@ -55,41 +57,45 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
       className="fixed inset-x-0 top-[0.75rem] z-[60]"
     >
       <div
-        className={`relative mx-auto w-[var(--container)] rounded-[var(--radius-card)] transition-colors duration-700 ${solid ? "bg-[color-mix(in_srgb,var(--card)_92%,transparent)] text-card-foreground backdrop-blur-[12px]" : "bg-transparent text-foreground"}`}
+        className={`relative mx-auto w-[var(--container)] rounded-[var(--radius-card)] transition-colors duration-700 ${solid ? "bg-[color-mix(in_srgb,var(--card)_92%,transparent)] text-card-foreground backdrop-blur-[12px] shadow-lg border border-[#1C2B4B]" : "bg-transparent text-foreground"}`}
       >
-        <div className="flex h-[3.5rem] items-center justify-between gap-[var(--gap)] pl-[1rem] pr-[0.375rem] lg:pl-[1.25rem] lg:pr-[0.625rem]">
-          <a href="#" aria-label={brand} className="flex min-h-[44px] min-w-0 items-center">
+        <div className="flex h-[3.75rem] items-center justify-between gap-[var(--gap)] pl-[1rem] pr-[0.375rem] lg:pl-[1.25rem] lg:pr-[0.625rem]">
+          <Link to="/" aria-label={brand} className="flex min-h-[44px] min-w-0 items-center gap-3 shrink-0">
             {logoSrc ? (
-              <img src={logoSrc} alt={brand} loading="eager" decoding="async" className="h-[2rem] w-auto max-w-[40vw] object-contain" />
-            ) : (
-              <p className="truncate font-[family-name:var(--font-heading)] text-[length:var(--text-body-lg)] leading-none tracking-[var(--heading-tracking)] pb-[0.2em] -mb-[0.2em]">{brand}</p>
-            )}
-          </a>
+              <img src={logoSrc} alt={brand} loading="eager" decoding="async" className="h-[2.25rem] w-auto max-w-[40vw] object-contain drop-shadow" />
+            ) : null}
+            <span className="truncate font-[family-name:var(--font-heading)] text-xl font-bold tracking-[var(--heading-tracking)] text-[#FEF9EE]">{brand}</span>
+          </Link>
 
-          <div className="hidden min-w-0 items-center gap-[clamp(1rem,2.6vw,2.5rem)] min-[94.5rem]:flex">
-            {navItems.map((item, i) => (
-              <a
-                key={`${i}-${item.name}`}
-                href={item.href}
-                className="whitespace-nowrap text-[length:var(--text-label)] leading-[1.5] opacity-75 transition-opacity duration-300 hover:opacity-100"
-              >
-                {item.name}
-              </a>
-            ))}
+          <div className="hidden min-w-0 items-center gap-[clamp(0.5rem,1.4vw,1.5rem)] xl:flex">
+            {navItems.map((item, i) => {
+              const active = location.pathname === item.href || (item.href !== '/' && location.pathname.startsWith(item.href));
+              return (
+                <Link
+                  key={`${i}-${item.name}`}
+                  to={item.href}
+                  className={`whitespace-nowrap text-[length:var(--text-label)] leading-[1.5] transition-all duration-300 ${
+                    active ? "text-[#F0BB5D] font-medium opacity-100" : "text-[#FEF9EE]/80 hover:text-[#F0BB5D] hover:opacity-100"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
           </div>
 
           <div className="flex shrink-0 items-center gap-[0.5rem]">
             {cta && (
-              <a href={cta.href} className="btn-secondary btn-nav btn-sm hidden lg:inline-flex">
+              <Link to={cta.href} className="btn-primary btn-sm hidden xl:inline-flex">
                 {cta.text}
-              </a>
+              </Link>
             )}
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
               aria-label={open ? closeText : menuText}
-              className="relative flex size-[44px] items-center justify-center lg:size-[2.25rem] lg:rounded-[0.75rem] lg:bg-card lg:text-card-foreground min-[94.5rem]:hidden"
+              className="relative flex size-[44px] items-center justify-center lg:size-[2.25rem] lg:rounded-[0.75rem] lg:bg-card lg:text-card-foreground xl:hidden"
             >
               <div aria-hidden="true" className="relative h-[8px] w-[18px]">
                 <motion.div
@@ -122,28 +128,36 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={reduce ? { duration: 0 } : variantSpring}
-              className="overflow-hidden lg:absolute lg:right-0 lg:top-full lg:mt-[0.5rem] lg:w-[22rem] lg:rounded-[var(--radius-card)] lg:bg-card lg:text-card-foreground min-[94.5rem]:hidden"
+              className="overflow-hidden lg:absolute lg:right-0 lg:top-full lg:mt-[0.5rem] lg:w-[22rem] lg:rounded-[var(--radius-card)] lg:bg-card lg:text-card-foreground xl:hidden shadow-2xl border border-[#1C2B4B]"
             >
               <div className="flex max-h-[calc(100svh-6rem)] flex-col gap-[1.5rem] overflow-y-auto px-[1rem] pb-[1.25rem] pt-[0.5rem] lg:px-[1.25rem] lg:pt-[1rem]">
                 <div className="flex flex-col">
-                  {navItems.map((item, i) => (
-                    <motion.a
-                      key={`${i}-${item.name}`}
-                      href={item.href}
-                      onClick={() => setOpen(false)}
-                      initial={reduce ? false : { opacity: 0, y: 24 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ ...spring, delay: 0.05 + i * 0.05 }}
-                      className="py-[0.4rem] font-[family-name:var(--font-heading)] text-[length:var(--text-h3)] leading-[1.25] tracking-[var(--heading-tracking)] [overflow-wrap:anywhere]"
-                    >
-                      {item.name}
-                    </motion.a>
-                  ))}
+                  {navItems.map((item, i) => {
+                    const active = location.pathname === item.href || (item.href !== '/' && location.pathname.startsWith(item.href));
+                    return (
+                      <motion.div
+                        key={`${i}-${item.name}`}
+                        initial={reduce ? false : { opacity: 0, y: 24 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ ...spring, delay: 0.05 + i * 0.05 }}
+                      >
+                        <Link
+                          to={item.href}
+                          onClick={() => setOpen(false)}
+                          className={`block py-[0.4rem] font-[family-name:var(--font-heading)] text-[length:var(--text-h3)] leading-[1.25] tracking-[var(--heading-tracking)] [overflow-wrap:anywhere] ${
+                            active ? "text-[#F0BB5D]" : "text-[#FEF9EE]"
+                          }`}
+                        >
+                          {item.name}
+                        </Link>
+                      </motion.div>
+                    );
+                  })}
                 </div>
                 {cta && (
-                  <a href={cta.href} onClick={() => setOpen(false)} className="btn-primary self-start lg:hidden">
+                  <Link to={cta.href} onClick={() => setOpen(false)} className="btn-primary self-start xl:hidden">
                     {cta.text}
-                  </a>
+                  </Link>
                 )}
               </div>
             </motion.div>
