@@ -1,8 +1,16 @@
 import { Component, lazy, Suspense, useEffect, type ErrorInfo, type ReactNode } from 'react'
-import { Routes, Route, Navigate } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import { ReactLenis } from 'lenis/react'
 import { routes } from './routes'
 import Layout from './components/Layout'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 const pages = import.meta.glob('./pages/*.tsx')
 
@@ -224,6 +232,7 @@ function App() {
             </div>
           }
         >
+          <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
               {routes.map((route) => {
