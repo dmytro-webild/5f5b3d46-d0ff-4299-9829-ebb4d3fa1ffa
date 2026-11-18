@@ -32,7 +32,7 @@ export default function ContactPage() {
             text: "Explore FAQ",
             href: "#contact-faq"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=5"
           imageAlt="Veltrix Technologies support team"
           introDelay={0.2}
           kpis={[
@@ -115,7 +115,7 @@ export default function ContactPage() {
           }}
           submitText="Submit Inquiry"
           successText="Thank you! The Veltrix Technologies team has received your message and will reply shortly."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=3"
           imageAlt="Contact form background"
         />
       </div>
@@ -148,7 +148,7 @@ export default function ContactPage() {
               text: "Call +1 (800) 554-7383",
               href: "tel:+18005547383"
             },
-            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg",
+            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg?_wi=1",
             imageAlt: "Support specialist"
           }}
         />

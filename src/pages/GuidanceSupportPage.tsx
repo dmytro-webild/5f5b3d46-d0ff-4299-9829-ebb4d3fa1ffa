@@ -25,7 +25,7 @@ export default function GuidanceSupportPage() {
             text: "Explore Guidance Topics",
             href: "#topics"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg?_wi=4"
           imageAlt="Quiet reflection and spiritual support"
           introDelay={0.2}
           kpis={[
@@ -72,7 +72,7 @@ export default function GuidanceSupportPage() {
             {
               title: "Marriage & Family Counseling",
               description: "Restorative marriage guides, communication workshops, and Christian parenting advice for raising grounded children.",
-              imageSrc: "https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg?_wi=2",
               imageAlt: "Family counseling and guidance"
             },
             {
@@ -87,7 +87,7 @@ export default function GuidanceSupportPage() {
             {
               title: "Financial Stewardship",
               description: "Biblical principles on budgeting, debt freedom, tithing, and generous living in modern economic times.",
-              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=4",
               imageAlt: "Financial stewardship resources"
             },
             {
@@ -113,7 +113,7 @@ export default function GuidanceSupportPage() {
               date: "Audio & Guide",
               description: "A 5-part audio series exploring how scripture addresses fear, anxiety, and panic with divine peace.",
               href: "#counseling-form",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=5",
               imageAlt: "Peace and reflection guide"
             },
             {
@@ -122,7 +122,7 @@ export default function GuidanceSupportPage() {
               date: "Devotional Guide",
               description: "Practical steps and biblical promises to help process sorrow while anchoring in everlasting hope.",
               href: "#counseling-form",
-              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg?_wi=5",
               imageAlt: "Grief support guide"
             },
             {
@@ -131,7 +131,7 @@ export default function GuidanceSupportPage() {
               date: "Workshop Brief",
               description: "Key Biblical principles for conflict resolution, forgiveness, and deeper emotional intimacy.",
               href: "#counseling-form",
-              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg?_wi=2",
               imageAlt: "Marriage communication guide"
             },
             {
@@ -140,7 +140,7 @@ export default function GuidanceSupportPage() {
               date: "Mentorship Path",
               description: "Helping young adults align their talents, career aspirations, and spiritual calling.",
               href: "#counseling-form",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=8",
               imageAlt: "Youth mentorship guide"
             }
           ]}
@@ -177,7 +177,7 @@ export default function GuidanceSupportPage() {
               text: "Request Urgent Call",
               href: "#counseling-form"
             },
-            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg",
+            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg?_wi=3",
             imageAlt: "Pastoral support representative"
           }}
         />
@@ -202,7 +202,7 @@ export default function GuidanceSupportPage() {
           }}
           submitText="Submit Confidential Request"
           successText="Your request has been securely delivered to our pastoral team. We will reach out with care and speed."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=5"
           imageAlt="Confidential guidance request"
         />
       </div>

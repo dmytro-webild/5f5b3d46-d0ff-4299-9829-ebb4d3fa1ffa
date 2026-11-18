@@ -24,7 +24,7 @@ export default function AnnouncementsPage() {
             text: "Submit Church Bulletin",
             href: "#subscribe"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg?_wi=2"
           imageAlt="Sevenfold announcements feed"
           introDelay={0.2}
           kpis={[
@@ -60,7 +60,7 @@ export default function AnnouncementsPage() {
               date: "November 2026",
               description: "Veltrix Technologies has launched AI 2.0 with deeper contextual scripture insights, multilingual support, and automated Sabbath School lesson prep.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=1",
               imageAlt: "AI 2.0 launch"
             },
             {
@@ -69,7 +69,7 @@ export default function AnnouncementsPage() {
               date: "November 2026",
               description: "Official registration for the upcoming regional youth camporee is now live in the Sevenfold Events portal. Early bird passes available.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=2",
               imageAlt: "Pathfinder Camporee registration"
             },
             {
@@ -78,7 +78,7 @@ export default function AnnouncementsPage() {
               date: "November 2026",
               description: "A 30-day interactive devotional series curated for high school and university students, featuring daily audio reflections.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=1",
               imageAlt: "Youth devotional series"
             },
             {
@@ -87,7 +87,7 @@ export default function AnnouncementsPage() {
               date: "October 2026",
               description: "Church administrators can now manage multiple campuses, synchronize announcements, and coordinate pastoral care teams seamlessly.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=3",
               imageAlt: "Church administration suite"
             },
             {
@@ -96,7 +96,7 @@ export default function AnnouncementsPage() {
               date: "October 2026",
               description: "Join thousands of believers worldwide for our quarterly 48-hour united prayer initiative starting this Friday evening.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg?_wi=1",
               imageAlt: "Global prayer weekend"
             },
             {
@@ -105,7 +105,7 @@ export default function AnnouncementsPage() {
               date: "October 2026",
               description: "Mihle Ncube and Munyaradzi Gaadzikwa unveil a new digital grant initiative supporting youth ministry software adoption in underserved areas.",
               href: "#subscribe",
-              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg?_wi=1",
               imageAlt: "Veltrix Founders Grant"
             }
           ]}
@@ -138,7 +138,7 @@ export default function AnnouncementsPage() {
             {
               title: "Youth & Pathfinder Rallies",
               description: "Camp dates, honor requirements, drill competitions, and youth leader training announcements.",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=3",
               imageAlt: "Youth rally announcements"
             },
             {
@@ -173,7 +173,7 @@ export default function AnnouncementsPage() {
           }}
           submitText="Subscribe to Bulletins"
           successText="You are subscribed! You will receive official Sevenfold updates directly in your inbox."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=1"
           imageAlt="Subscribing to announcements"
         />
       </div>

@@ -33,7 +33,7 @@ export default function AboutPage() {
             text: "Contact Founders",
             href: "/contact"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=1"
           imageAlt="Veltrix Technologies team developing Sevenfold platform"
           introDelay={0.2}
           kpis={[
@@ -119,7 +119,7 @@ export default function AboutPage() {
             {
               title: "Minimalist Elegance",
               description: "Deep midnight navy (#010519), radiant gold (#F0BB5D), and ivory (#FEF9EE) visual aesthetics.",
-              imageSrc: "https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg?_wi=1",
               imageAlt: "Minimalist dark aesthetic interface"
             },
             {
@@ -134,7 +134,7 @@ export default function AboutPage() {
             {
               title: "Youth & Pathfinder Focus",
               description: "Engaging interactive pathways crafted specifically for teens, young adults, and student leaders.",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=1",
               imageAlt: "Youth engaging on digital tablet"
             },
             {
@@ -158,7 +158,7 @@ export default function AboutPage() {
               quote: "Veltrix Technologies has achieved something rare: software that feels reverent yet technologically cutting-edge. Sevenfold is the platform we have been waiting for.",
               name: "Pastor David Miller",
               role: "Senior Pastor",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg?_wi=1",
               imageAlt: "Pastor David Miller",
               stats: [
                 { label: "Church Growth", value: "35% higher" },
@@ -170,7 +170,7 @@ export default function AboutPage() {
               quote: "Mihle Ncube and Munyaradzi Gaadzikwa understood the exact needs of our young people. Sevenfold brings energy, clarity, and deep community to youth ministry.",
               name: "Sarah Jenkins",
               role: "Youth Director",
-              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg?_wi=1",
               imageAlt: "Sarah Jenkins",
               stats: [
                 { label: "Youth Engaged", value: "8,500+" },
@@ -200,7 +200,7 @@ export default function AboutPage() {
           }}
           submitText="Send Inquiry to Veltrix"
           successText="Thank you for reaching out! Mihle and Munyaradzi will be in touch shortly."
-          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=2"
           imageAlt="Veltrix team contact background"
         />
       </div>

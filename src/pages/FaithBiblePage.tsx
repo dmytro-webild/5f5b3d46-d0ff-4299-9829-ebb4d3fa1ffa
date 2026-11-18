@@ -41,7 +41,7 @@ export default function FaithBiblePage() {
             text: "Daily Devotionals",
             href: "#devotionals"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=3"
           imageAlt="Digital Bible study on Sevenfold"
           introDelay={0.2}
           kpis={[
@@ -170,7 +170,7 @@ export default function FaithBiblePage() {
             {
               title: "Youth & Pathfinder Study Tracks",
               description: "Age-specific study modules that break down complex theology into engaging, practical life lessons.",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=6",
               imageAlt: "Youth reading scripture"
             },
             {
@@ -185,7 +185,7 @@ export default function FaithBiblePage() {
             {
               title: "Personal Prayer Journal",
               description: "Private digital journal to write reflections, log answered prayers, and save favorite verses.",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=3",
               imageAlt: "Journaling and prayer"
             },
             {
@@ -211,7 +211,7 @@ export default function FaithBiblePage() {
               date: "Proverbs Focus",
               description: "Daily practical wisdom for decision making, relationships, work ethic, and spiritual discernment.",
               href: "#ai-assistant",
-              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg?_wi=2",
               imageAlt: "Wisdom study plan"
             },
             {
@@ -220,7 +220,7 @@ export default function FaithBiblePage() {
               date: "Matthew - John",
               description: "An immersive journey through the parables, miracles, death, and resurrection of Christ.",
               href: "#ai-assistant",
-              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg?_wi=3",
               imageAlt: "Gospels study plan"
             },
             {
@@ -229,7 +229,7 @@ export default function FaithBiblePage() {
               date: "Sabbath Focus",
               description: "Rediscover the blessing of holy rest, spiritual rejuvenation, and family worship on the Sabbath.",
               href: "#ai-assistant",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=4",
               imageAlt: "Sabbath rest plan"
             },
             {
@@ -238,7 +238,7 @@ export default function FaithBiblePage() {
               date: "Apologetics",
               description: "Tackling hard questions about God, science, suffering, and purpose with biblical clarity.",
               href: "#ai-assistant",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=7",
               imageAlt: "Youth apologetics plan"
             }
           ]}
@@ -275,7 +275,7 @@ export default function FaithBiblePage() {
               text: "Contact Study Team",
               href: "/contact"
             },
-            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg",
+            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg?_wi=2",
             imageAlt: "Study team representative"
           }}
         />
@@ -300,7 +300,7 @@ export default function FaithBiblePage() {
           }}
           submitText="Subscribe to Scripture Feed"
           successText="Subscribed! Check your inbox every morning for your daily devotional."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=4"
           imageAlt="Devotional subscriber background"
         />
       </div>

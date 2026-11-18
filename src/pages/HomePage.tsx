@@ -39,7 +39,7 @@ export default function HomePage() {
             text: "About Sevenfold",
             href: "/about"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/abstract-technology-background-concept_1194-617406.jpg?_wi=3"
           imageAlt="Sevenfold Christian digital network interface"
           introDelay={0.3}
           kpis={[
@@ -112,7 +112,7 @@ export default function HomePage() {
             {
               title: "Fellowship & Groups",
               description: "Connect with local church members, life stage groups, and youth & Pathfinder ministries.",
-              imageSrc: "https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg?_wi=3",
               imageAlt: "Believers engaging in Bible study"
             },
             {
@@ -127,7 +127,7 @@ export default function HomePage() {
             {
               title: "Tailored Growth Pathways",
               description: "Personalized spiritual growth pathways tuned for teens, young adults, and senior leaders.",
-              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg?_wi=3",
               imageAlt: "Personal prayer journal and planner"
             },
             {
@@ -153,7 +153,7 @@ export default function HomePage() {
               date: "Faith & Bible",
               description: "Contextual answers for Bible study, lesson preparation, and daily devotional reflections.",
               href: "/faith-bible",
-              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=5",
               imageAlt: "Sevenfold AI scripture interface"
             },
             {
@@ -162,7 +162,7 @@ export default function HomePage() {
               date: "Community",
               description: "Unite youth, adults, and ministry leaders across interactive group feeds and church announcements.",
               href: "/community",
-              imageSrc: "https://img.b2bpic.net/free-photo/adult-businesswoman-checking-tablet_23-2148452642.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/adult-businesswoman-checking-tablet_23-2148452642.jpg?_wi=1",
               imageAlt: "Community ministry network"
             },
             {
@@ -171,7 +171,7 @@ export default function HomePage() {
               date: "Faith & Bible",
               description: "Tailored reading plans and quiet-time guides structured around your life stage and personal goals.",
               href: "/faith-bible",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=6",
               imageAlt: "Daily scripture devotionals"
             },
             {
@@ -180,7 +180,7 @@ export default function HomePage() {
               date: "Events",
               description: "Specialized youth retreats, camporee registration, and mentorship tracks designed for young believers.",
               href: "/events",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=9",
               imageAlt: "Youth camps and events"
             },
             {
@@ -189,7 +189,7 @@ export default function HomePage() {
               date: "About Sevenfold",
               description: "Streamlined tools for church leaders to plan events, manage teams, and publish Sabbath announcements.",
               href: "/about",
-              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=6",
               imageAlt: "Church administration dashboard"
             },
             {
@@ -198,7 +198,7 @@ export default function HomePage() {
               date: "Guidance",
               description: "Pastoral care helplines, prayer chain requests, and encouraging articles for life challenges.",
               href: "/guidance",
-              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/woman-working-from-home_23-2148916096.jpg?_wi=3",
               imageAlt: "Guidance and support counseling"
             }
           ]}
@@ -292,7 +292,7 @@ export default function HomePage() {
               quote: "Sevenfold transformed how our youth group connects throughout the week. Daily devotionals and interactive Bible study features keep everyone engaged beyond Sunday service.",
               name: "Kevin Bennett",
               role: "Youth Director",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg?_wi=3",
               imageAlt: "Kevin Bennett, Youth Director",
               stats: [
                 { label: "Youth Engagement", value: "Up 85%" },
@@ -304,7 +304,7 @@ export default function HomePage() {
               quote: "The Sevenfold AI assistant helps me break down complex scripture into relatable discussion points every single week. It has revitalized our small group meetings completely.",
               name: "Molly Barnes",
               role: "Small Group Leader",
-              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg?_wi=3",
               imageAlt: "Molly Barnes, Small Group Leader",
               stats: [
                 { label: "Group Participation", value: "Doubled" },
@@ -316,7 +316,7 @@ export default function HomePage() {
               quote: "Managing ministry announcements, event schedules, and community outreach in one unified space saves our leadership team countless hours every month.",
               name: "Ethan Carter",
               role: "Church Administrator",
-              imageSrc: "https://img.b2bpic.net/free-photo/stylish-bearded-male-with-backpack-city-park_613910-11363.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/stylish-bearded-male-with-backpack-city-park_613910-11363.jpg?_wi=2",
               imageAlt: "Ethan Carter, Church Administrator",
               stats: [
                 { label: "Admin Time Saved", value: "15 hrs weekly" },
@@ -363,7 +363,7 @@ export default function HomePage() {
               text: "Contact Veltrix Team",
               href: "/contact"
             },
-            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg",
+            imageSrc: "https://img.b2bpic.net/free-photo/young-businessman-happy-expression_1194-1631.jpg?_wi=4",
             imageAlt: "Veltrix support representative"
           }}
         />
@@ -388,7 +388,7 @@ export default function HomePage() {
           }}
           submitText="Join Sevenfold Ecosystem"
           successText="Thank you! The Veltrix Technologies team will reach out shortly."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=6"
           imageAlt="Believer interacting with Sevenfold digital platform"
           ariaLabel="Sevenfold account creation and inquiry form"
         />
