@@ -24,7 +24,7 @@ export default function ResourcesPage() {
             text: "Request Custom Material",
             href: "#resource-request"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg?_wi=4"
           imageAlt="Ministry resource planning and study materials"
           introDelay={0.2}
           kpis={[
@@ -60,7 +60,7 @@ export default function ResourcesPage() {
               date: "PDF & AI Prompts",
               description: "Complete lesson outlines, icebreaker questions, historical maps, and Sevenfold AI study prompts.",
               href: "#resource-request",
-              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=6",
               imageAlt: "Sabbath school toolkit"
             },
             {
@@ -69,7 +69,7 @@ export default function ResourcesPage() {
               date: "Interactive PDF",
               description: "Comprehensive study guide covering Christian leadership, outdoor survival, and Bible memory honors.",
               href: "#resource-request",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=10",
               imageAlt: "Pathfinder workbook"
             },
             {
@@ -78,7 +78,7 @@ export default function ResourcesPage() {
               date: "Excel & Notion Templates",
               description: "Ready-to-use templates for event budgeting, volunteer scheduling, and Sabbath potluck organization.",
               href: "#resource-request",
-              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=7",
               imageAlt: "Church admin kit"
             },
             {
@@ -87,7 +87,7 @@ export default function ResourcesPage() {
               date: "PowerPoint & Keynote",
               description: "High-definition, dark-theme lyrics slides designed specifically for church sanctuary projectors.",
               href: "#resource-request",
-              imageSrc: "https://img.b2bpic.net/free-photo/adult-businesswoman-checking-tablet_23-2148452642.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/adult-businesswoman-checking-tablet_23-2148452642.jpg?_wi=2",
               imageAlt: "Worship hymnal slides"
             }
           ]}
@@ -120,7 +120,7 @@ export default function ResourcesPage() {
             {
               title: "Church Administration Toolkits",
               description: "Financial templates, policy guidelines, announcement graphics, and volunteer onboarding checklists.",
-              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=8",
               imageAlt: "Administration toolkits"
             },
             {
@@ -155,7 +155,7 @@ export default function ResourcesPage() {
           }}
           submitText="Get Resource Pack"
           successText="Your resource download link has been sent to your email! Enjoy your study materials."
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=7"
           imageAlt="Resource download form"
         />
       </div>
