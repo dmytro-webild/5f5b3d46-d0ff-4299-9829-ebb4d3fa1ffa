@@ -128,12 +128,18 @@ export default function FaithBiblePage() {
 
             {/* AI Response Display */}
             {response && (
-              <div className="mt-6 p-5 rounded-xl bg-[#101B35]/90 border border-[#F0BB5D]/40 text-sm leading-relaxed text-[#FEF9EE] animate-fade-in">
-                <div className="flex items-center justify-between mb-2 pb-2 border-b border-[#1C2B4B]">
-                  <span className="text-xs font-semibold text-[#F0BB5D] uppercase tracking-wider">Sevenfold AI Study Result</span>
-                  <span className="text-xs text-muted-foreground">Veltrix Verified Scripture Analysis</span>
+              <div className="mt-6 p-5 sm:p-6 rounded-2xl bg-[#101B35]/95 border border-[#F0BB5D]/50 text-sm leading-relaxed text-[#FEF9EE] shadow-2xl animate-fade-in relative">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-3 pb-3 border-b border-[#1C2B4B]">
+                  <div className="inline-flex items-center gap-2 bg-[#F0BB5D]/15 border border-[#F0BB5D]/60 text-[#F0BB5D] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                    <span>🤖 AI-GENERATED RESPONSE</span>
+                  </div>
+                  <span className="text-[11px] text-[#C0C9DC]">Sevenfold AI Engine v2.6 • Veltrix Tech</span>
                 </div>
-                <p className="whitespace-pre-line">{response}</p>
+                <p className="whitespace-pre-line text-sm sm:text-base leading-relaxed text-[#FEF9EE] font-serif">{response}</p>
+                <div className="mt-4 pt-3 border-t border-[#1C2B4B]/80 flex items-center justify-between text-[11px] text-muted-foreground">
+                  <span>*AI-generated guidance based on Seventh-day Adventist theological resources.</span>
+                  <span className="text-[#F0BB5D] font-semibold">Verified Scripture References</span>
+                </div>
               </div>
             )}
           </div>
