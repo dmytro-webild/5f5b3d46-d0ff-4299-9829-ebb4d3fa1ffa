@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { AnimatePresence, motion, useReducedMotion } from "motion/react";
 import useMenuDialog from "@/components/kit/useMenuDialog";
+import type { UserProfile } from "@/components/AuthModal";
+import { User, Sparkles } from "lucide-react";
 
 type NavItem = { name: string; href: string };
 
@@ -15,12 +17,26 @@ interface NavbarFloatingPillProps {
   menuText?: string;
   closeText?: string;
   introDelay?: number;
+  userProfile?: UserProfile | null;
+  onOpenAuth?: () => void;
+  onReplayIntro?: () => void;
 }
 
 const spring = { type: "spring", bounce: 0.2, duration: 1 } as const;
 const variantSpring = { type: "spring", bounce: 0, duration: 0.8 } as const;
 
-const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", closeText = "Close", introDelay = 0 }: NavbarFloatingPillProps) => {
+const NavbarFloatingPill = ({
+  brand,
+  logoSrc,
+  navItems,
+  cta,
+  menuText = "Menu",
+  closeText = "Close",
+  introDelay = 0,
+  userProfile,
+  onOpenAuth,
+  onReplayIntro,
+}: NavbarFloatingPillProps) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const reduce = useReducedMotion();
@@ -57,25 +73,32 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
       className="fixed inset-x-0 top-[0.75rem] z-[60]"
     >
       <div
-        className={`relative mx-auto w-[var(--container)] rounded-[var(--radius-card)] transition-colors duration-700 ${solid ? "bg-[color-mix(in_srgb,var(--card)_92%,transparent)] text-card-foreground backdrop-blur-[12px] shadow-lg border border-[#1C2B4B]" : "bg-transparent text-foreground"}`}
+        className={`relative mx-auto w-[var(--container)] rounded-[var(--radius-card)] transition-colors duration-700 ${
+          solid
+            ? "bg-[color-mix(in_srgb,var(--card)_92%,transparent)] text-card-foreground backdrop-blur-[12px] shadow-lg border border-[#1C2B4B]"
+            : "bg-transparent text-foreground"
+        }`}
       >
         <div className="flex h-[3.75rem] items-center justify-between gap-[var(--gap)] pl-[1rem] pr-[0.375rem] lg:pl-[1.25rem] lg:pr-[0.625rem]">
-          <Link to="/" aria-label={brand} className="flex min-h-[44px] min-w-0 items-center gap-3 shrink-0">
+          <Link to="/" aria-label={brand} className="flex min-h-[44px] min-w-0 items-center gap-2.5 shrink-0">
             {logoSrc ? (
               <img src={logoSrc} alt={brand} loading="eager" decoding="async" className="h-[2.25rem] w-auto max-w-[40vw] object-contain drop-shadow" />
             ) : null}
-            <span className="truncate font-[family-name:var(--font-heading)] text-xl font-bold tracking-[var(--heading-tracking)] text-[#FEF9EE]">{brand}</span>
+            <span className="truncate font-[family-name:var(--font-heading)] text-xl font-bold tracking-[var(--heading-tracking)] text-[#FEF9EE]">
+              {brand}
+            </span>
           </Link>
 
-          <div className="hidden min-w-0 items-center gap-[clamp(0.5rem,1.4vw,1.5rem)] xl:flex">
+          {/* Desktop Nav Items */}
+          <div className="hidden min-w-0 items-center gap-[clamp(0.4rem,1.1vw,1.2rem)] xl:flex">
             {navItems.map((item, i) => {
-              const active = location.pathname === item.href || (item.href !== '/' && location.pathname.startsWith(item.href));
+              const active = location.pathname === item.href || (item.href !== "/" && location.pathname.startsWith(item.href));
               return (
                 <Link
                   key={`${i}-${item.name}`}
                   to={item.href}
-                  className={`whitespace-nowrap text-[length:var(--text-label)] leading-[1.5] transition-all duration-300 ${
-                    active ? "text-[#F0BB5D] font-medium opacity-100" : "text-[#FEF9EE]/80 hover:text-[#F0BB5D] hover:opacity-100"
+                  className={`whitespace-nowrap text-xs font-medium leading-[1.5] transition-all duration-300 ${
+                    active ? "text-[#F0BB5D] font-semibold opacity-100" : "text-[#FEF9EE]/85 hover:text-[#F0BB5D] hover:opacity-100"
                   }`}
                 >
                   {item.name}
@@ -85,11 +108,35 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
           </div>
 
           <div className="flex shrink-0 items-center gap-[0.5rem]">
+            {/* Replay Intro Trigger */}
+            {onReplayIntro && (
+              <button
+                onClick={onReplayIntro}
+                title="Watch Cinematic Logo Reveal"
+                className="hidden sm:inline-flex items-center gap-1 px-2.5 py-1.5 text-[11px] font-semibold text-[#F0BB5D] bg-[#010519]/70 hover:bg-[#010519] border border-[#1C2B4B] rounded-full transition-all"
+              >
+                <Sparkles className="w-3 h-3" />
+                <span>Logo Reveal</span>
+              </button>
+            )}
+
+            {/* Auth / Account Button */}
+            {onOpenAuth && (
+              <button
+                onClick={onOpenAuth}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full bg-[#101B35] border border-[#1C2B4B] hover:border-[#F0BB5D] text-[#FEF9EE] transition-colors"
+              >
+                <User className="w-3.5 h-3.5 text-[#F0BB5D]" />
+                <span className="max-w-[100px] truncate">{userProfile ? userProfile.name.split(" ")[0] : "Sign In"}</span>
+              </button>
+            )}
+
             {cta && (
               <Link to={cta.href} className="btn-primary btn-sm hidden xl:inline-flex">
                 {cta.text}
               </Link>
             )}
+
             <button
               type="button"
               onClick={() => setOpen((value) => !value)}
@@ -133,7 +180,7 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
               <div className="flex max-h-[calc(100svh-6rem)] flex-col gap-[1.5rem] overflow-y-auto px-[1rem] pb-[1.25rem] pt-[0.5rem] lg:px-[1.25rem] lg:pt-[1rem]">
                 <div className="flex flex-col">
                   {navItems.map((item, i) => {
-                    const active = location.pathname === item.href || (item.href !== '/' && location.pathname.startsWith(item.href));
+                    const active = location.pathname === item.href || (item.href !== "/" && location.pathname.startsWith(item.href));
                     return (
                       <motion.div
                         key={`${i}-${item.name}`}
@@ -154,11 +201,33 @@ const NavbarFloatingPill = ({ brand, logoSrc, navItems, cta, menuText = "Menu", 
                     );
                   })}
                 </div>
-                {cta && (
-                  <Link to={cta.href} onClick={() => setOpen(false)} className="btn-primary self-start xl:hidden">
-                    {cta.text}
-                  </Link>
-                )}
+
+                <div className="flex flex-col gap-2 pt-2 border-t border-[#1C2B4B]">
+                  {onReplayIntro && (
+                    <button
+                      onClick={() => {
+                        setOpen(false);
+                        onReplayIntro();
+                      }}
+                      className="btn-secondary w-full py-2 text-xs flex items-center justify-center gap-2"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-[#F0BB5D]" />
+                      <span>Watch Cinematic Logo Reveal</span>
+                    </button>
+                  )}
+                  {onOpenAuth && (
+                    <button
+                      onClick={() => {
+                        setOpen(false);
+                        onOpenAuth();
+                      }}
+                      className="btn-primary w-full py-2 text-xs flex items-center justify-center gap-2"
+                    >
+                      <User className="w-3.5 h-3.5" />
+                      <span>{userProfile ? `Account: ${userProfile.name}` : "Sign In / Register"}</span>
+                    </button>
+                  )}
+                </div>
               </div>
             </motion.div>
           )}
