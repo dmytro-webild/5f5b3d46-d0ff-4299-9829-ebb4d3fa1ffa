@@ -62,6 +62,7 @@ export default function Layout() {
           }}
           introDelay={0.4}
           userProfile={userProfile}
+          signInHref="https://adventist.org"
           onOpenAuth={() => setShowAuthModal(true)}
           onReplayIntro={() => setShowForceReveal(true)}
         />

@@ -20,6 +20,7 @@ interface NavbarFloatingPillProps {
   userProfile?: UserProfile | null;
   onOpenAuth?: () => void;
   onReplayIntro?: () => void;
+  signInHref?: string;
 }
 
 const spring = { type: "spring", bounce: 0.2, duration: 1 } as const;
@@ -36,6 +37,7 @@ const NavbarFloatingPill = ({
   userProfile,
   onOpenAuth,
   onReplayIntro,
+  signInHref = "https://adventist.org",
 }: NavbarFloatingPillProps) => {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -120,15 +122,23 @@ const NavbarFloatingPill = ({
               </button>
             )}
 
-            {/* Auth / Account Button */}
-            {onOpenAuth && (
-              <button
-                onClick={onOpenAuth}
+            {/* Auth / Account Link */}
+            {(onOpenAuth || signInHref) && (
+              <a
+                href={userProfile ? "#account" : signInHref}
+                target={userProfile ? undefined : "_blank"}
+                rel={userProfile ? undefined : "noopener noreferrer"}
+                onClick={(e) => {
+                  if (userProfile && onOpenAuth) {
+                    e.preventDefault();
+                    onOpenAuth();
+                  }
+                }}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full bg-[#101B35] border border-[#1C2B4B] hover:border-[#F0BB5D] text-[#FEF9EE] transition-colors"
               >
                 <User className="w-3.5 h-3.5 text-[#F0BB5D]" />
                 <span className="max-w-[100px] truncate">{userProfile ? userProfile.name.split(" ")[0] : "Sign In"}</span>
-              </button>
+              </a>
             )}
 
             {cta && (
@@ -215,17 +225,23 @@ const NavbarFloatingPill = ({
                       <span>Watch Cinematic Logo Reveal</span>
                     </button>
                   )}
-                  {onOpenAuth && (
-                    <button
-                      onClick={() => {
+                  {(onOpenAuth || signInHref) && (
+                    <a
+                      href={userProfile ? "#account" : signInHref}
+                      target={userProfile ? undefined : "_blank"}
+                      rel={userProfile ? undefined : "noopener noreferrer"}
+                      onClick={(e) => {
                         setOpen(false);
-                        onOpenAuth();
+                        if (userProfile && onOpenAuth) {
+                          e.preventDefault();
+                          onOpenAuth();
+                        }
                       }}
                       className="btn-primary w-full py-2 text-xs flex items-center justify-center gap-2"
                     >
                       <User className="w-3.5 h-3.5" />
                       <span>{userProfile ? `Account: ${userProfile.name}` : "Sign In / Register"}</span>
-                    </button>
+                    </a>
                   )}
                 </div>
               </div>
