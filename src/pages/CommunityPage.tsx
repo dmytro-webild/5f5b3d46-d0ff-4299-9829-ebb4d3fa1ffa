@@ -25,7 +25,7 @@ export default function CommunityPage() {
             text: "Submit Prayer Request",
             href: "#prayer-request"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/preadolescent-girls-focused-literary-analysis-essay-writing-library_482257-123624.jpg?_wi=1"
           imageAlt="Believers gathering in small group fellowship"
           introDelay={0.2}
           kpis={[
@@ -72,7 +72,7 @@ export default function CommunityPage() {
             {
               title: "Sabbath School Circles",
               description: "Deep-dive lesson discussions with shared study notes and Sevenfold AI assistant prompts.",
-              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lady-holds-tablet-with-mockup-template_482257-81554.jpg?_wi=2",
               imageAlt: "Digital Bible study notes"
             },
             {
@@ -87,7 +87,7 @@ export default function CommunityPage() {
             {
               title: "Married & Family Life",
               description: "Marriage encouragement guides, parenting devotional tracks, and family retreat organizing.",
-              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/young-woman-writing-planner-cafe-table-morning_1098-20099.jpg?_wi=1",
               imageAlt: "Family devotional resources"
             },
             {
@@ -113,7 +113,7 @@ export default function CommunityPage() {
               date: "Every Friday, 7 PM",
               description: "Live acoustic praise, testimony sharing, and weekend Sabbath welcome streams.",
               href: "#groups",
-              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/fitness-yoga-tourist-leisure-natural_1150-1004.jpg?_wi=2",
               imageAlt: "Vespers prayer gathering"
             },
             {
@@ -122,7 +122,7 @@ export default function CommunityPage() {
               date: "Monthly Gathering",
               description: "Bringing together young people from over 50 regional congregations for worship and sports.",
               href: "#groups",
-              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=4",
               imageAlt: "Youth rally gathering"
             },
             {
@@ -131,7 +131,7 @@ export default function CommunityPage() {
               date: "Continuous",
               description: "Join virtual prayer rooms around the clock or post your personal prayer requests.",
               href: "#prayer-request",
-              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/sad-contemplative-person-near-lake_23-2150420650.jpg?_wi=2",
               imageAlt: "Quiet time prayer"
             },
             {
@@ -140,7 +140,7 @@ export default function CommunityPage() {
               date: "Weekly Exchange",
               description: "Resource sharing, lesson plans, and discussion ideas curated by experienced instructors.",
               href: "#groups",
-              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/two-smiling-male-office-workers-working-with-laptop_171337-5836.jpg?_wi=4",
               imageAlt: "Sabbath school teachers"
             }
           ]}
@@ -160,7 +160,7 @@ export default function CommunityPage() {
               quote: "Moving to a new city was daunting, but Sevenfold instantly connected me with a warm small group nearby. I felt welcomed from day one.",
               name: "Rachel Vance",
               role: "Community Member",
-              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/cheerful-young-businesswoman-wearing-eyeglasses_1262-4761.jpg?_wi=2",
               imageAlt: "Rachel Vance",
               stats: [
                 { label: "Community Rating", value: "5 / 5" },
@@ -172,7 +172,7 @@ export default function CommunityPage() {
               quote: "When my father was in critical surgery, I posted a prayer request on Sevenfold. Within minutes, over 300 believers left messages praying for him. Praise God!",
               name: "Marcus Thorne",
               role: "Believer",
-              imageSrc: "https://img.b2bpic.net/free-photo/stylish-bearded-male-with-backpack-city-park_613910-11363.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/stylish-bearded-male-with-backpack-city-park_613910-11363.jpg?_wi=1",
               imageAlt: "Marcus Thorne",
               stats: [
                 { label: "Prayers Received", value: "340+" },
@@ -202,7 +202,7 @@ export default function CommunityPage() {
           }}
           submitText="Submit to Community"
           successText="Your request has been shared with our prayer team. May God bless you abundantly!"
-          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/woman-using-digital-tablet-technology_23-2149491795.jpg?_wi=2"
           imageAlt="Believer praying with digital tablet"
         />
       </div>
