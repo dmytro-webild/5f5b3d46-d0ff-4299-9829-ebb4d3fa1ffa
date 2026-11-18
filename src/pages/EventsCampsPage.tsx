@@ -104,7 +104,7 @@ export default function EventsCampsPage() {
             text: "Event Pathways",
             href: "#event-types"
           }}
-          imageSrc="https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg"
+          imageSrc="https://img.b2bpic.net/free-photo/lovely-girl-with-tablet-sitting-sofa_23-2147833837.jpg?_wi=5"
           imageAlt="Youth gathering at Christian retreat camp"
           introDelay={0.2}
           kpis={[
@@ -249,7 +249,7 @@ export default function EventsCampsPage() {
             {
               title: "Regional Sports & Fellowship Fairs",
               description: "Promoting physical health, sportsmanship, and inter-church camaraderie across volleyball, soccer, and track.",
-              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg",
+              imageSrc: "https://img.b2bpic.net/free-photo/front-view-smiley-man-with-backpack_23-2149915917.jpg?_wi=2",
               imageAlt: "Youth sports and fellowship"
             },
             {
